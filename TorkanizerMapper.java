@@ -37,20 +37,19 @@ s1=value.toString().toString().trim().replaceAll(" +", "\t");
  Double  like=0.0;
  int i=0;
  while (itr.hasMoreTokens()) {
-	 v=itr.nextToken();
-	 if (i==2){
-		 influenceurs=v.toString();}
-	 if (i>2 && isNumeric(v.toString())){
-		 like=Double.parseDouble(v.toString());
-	 context.write(new Text(influenceurs), new 
-	DoubleWritable( like));}
+ v=itr.nextToken();
+ if (i==2){
+ influenceurs=v.toString();}
+if (i>2 && isNumeric(v.toString())){
+ like=Double.parseDouble(v.toString());
+context.write(new Text(influenceurs), new DoubleWritable( like));}
 	 
-	System.out.println("influenceurs="+influenceurs+"like="+ like);
-	 i++;
-	 
-	 
-	 }
+System.out.println("influenceurs="+influenceurs+"like="+ like);
+ i++;
 	 
 	 
-	 }
  }
+	 
+	 
+ }
+}
