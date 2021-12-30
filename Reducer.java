@@ -1,4 +1,4 @@
-package tn.isima.tp3;
+package tn.isima.tp2;
 
 import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.Text;
