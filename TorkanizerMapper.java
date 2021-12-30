@@ -1,4 +1,4 @@
-Package tn.isima.tp3;
+Package tn.isima.tp2;
  import org.apache.hadoop.io.DoubleWritable;
  import org.apache.hadoop.io.Text;
  import org.apache.hadoop.mapreduce.Mapper;
@@ -9,11 +9,9 @@ Package tn.isima.tp3;
  
  public static boolean isNumeric(String string) {
  Double intValue;
- System.out.println(String.format("Parsing string: 
-\"%s\"", string));
+ System.out.println(String.format("Parsing string: \"%s\"", string));
  if(string == null || string.equals("")) {
- System.out.println("String cannot be parsed, it 
-is null or empty.");
+ System.out.println("String cannot be parsed, it is null or empty.");
  return false;
  }
  
@@ -21,16 +19,13 @@ is null or empty.");
  intValue = Double.parseDouble(string);
  return true;
  } catch (NumberFormatException e) {
- System.out.println("Input String cannot be 
-parsed to Integer.");
+ System.out.println("Input String cannot be parsed to Integer.");
  }
  return false;
 }
  
  private Text word = new Text();
- public void map(Object key, Text value, Mapper.Context 
-context
- ) throws IOException, InterruptedException {
+ public void map(Object key, Text value, Mapper.Context context ) throws IOException, InterruptedException {
  String 
 s1=value.toString().toString().trim().replaceAll(" +", "\t");
  
