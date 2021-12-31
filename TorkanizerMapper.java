@@ -30,7 +30,7 @@ Package tn.isima.tp2;
 s1=value.toString().toString().trim().replaceAll(" +", "\t");
  
  System.out.println("s1="+s1);
- StringTokenizer itr = new StringTokenizer(s1);
+ StringTorkanizer itr = new StringTorkanizer(s1);
  
  String influenceurs="";
  String v="";
