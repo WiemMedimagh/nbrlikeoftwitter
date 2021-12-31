@@ -23,7 +23,7 @@
       <archive>
         <manifest>
           <addClasspath>true</addClasspath>
-          <mainClass>tn.isima.tp2.Main</mainClass>
+          <mainClass>tn.isima.twetter.Main</mainClass>
         </manifest>
       </archive>
       <descriptorRefs>
