@@ -4,7 +4,7 @@ import org.apache.hadoop.io.NullWritable;
  import org.apache.hadoop.io.Text;
  import org.apache.hadoop.mapreduce.Mapper;
  import java.io.IOException;
- import java.util.StringTorkanizer;
+ import java.util.StringTokenizer;
  public class TorkanizerMapper extends Mapper<LongWritable, Text, NullWritbale, text>{
  
  public static boolean isNumeric(String string) {
