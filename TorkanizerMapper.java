@@ -1,10 +1,11 @@
 package tn.isima.tp2;
- import org.apache.hadoop.io.DoubleWritable;
+ import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.NullWritable;
  import org.apache.hadoop.io.Text;
  import org.apache.hadoop.mapreduce.Mapper;
  import java.io.IOException;
  import java.util.StringTorkanizer;
- public class TorkanizerMapper extends Mapper<Object, Text, Text, DoubleWritable>{
+ public class TorkanizerMapper extends Mapper<LongWritable, Text, NullWritbale, text>{
  
  public static boolean isNumeric(String string) {
  Double intValue;
@@ -24,17 +25,12 @@ package tn.isima.tp2;
 }
  
  private Text word = new Text();
- public void map(Object key, Text value, Mapper.Context context ) throws IOException, InterruptedException {
- String 
-s1=value.toString().toString().trim().replaceAll(" +", "\t");
- 
- System.out.println("s1="+s1);
- StringTorkanizer itr = new StringTorkanizer(s1);
- 
- String influenceurs="";
- String v="";
- Double  like=0.0;
- int i=0;
+ public void map(LongWritable key, Text value, Mapper.Context context ) throws IOException, InterruptedException {
+ String line=value toString();
+	 String[] data= linesplit.('/t');
+	 Integer.followers=Integer parseInt(data[1]);
+	 User like=followersPriortyQueue.peek();
+
  while (itr.hasMoreTokens()) {
  v=itr.nextToken();
  if (i==2){
