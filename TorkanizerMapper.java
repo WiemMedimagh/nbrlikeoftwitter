@@ -27,7 +27,7 @@ import org.apache.hadoop.io.NullWritable;
  private Text word = new Text();
  public void map(LongWritable key, Text value, Mapper.Context context ) throws IOException, InterruptedException {
  String line=value toString();
-	 String[] data= linesplit.('/t');
+	 String[] data= line.split('/t');
 	 Integer.followers=Integer parseInt(data[1]);
 	 User like=followersPriortyQueue.peek();
 
