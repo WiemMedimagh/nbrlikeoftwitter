@@ -42,3 +42,4 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
     //What is context ? and how are we giving the output to the reducer?
     context.write(word, one);
 }
+}
