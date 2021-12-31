@@ -30,16 +30,20 @@ import org.apache.hadoop.io.NullWritable;
 	 String[] data= line.split('/t');
 	 Integer.followers=Integer parseInt(data[1]);
 	 User like=followersPriortyQueue.peek();
+String followers="";
+ String v="";
+ Double like=0.0;
+ int i=0;
 
  while (itr.hasMoreTokens()) {
  v=itr.nextToken();
  if (i==2){
- influenceurs=v.toString();}
+ followers=v.toString();}
 if (i>2 && isNumeric(v.toString())){
  like=Double.parseDouble(v.toString());
 context.write(new Text(influenceurs), new DoubleWritable( like));}
 	 
-System.out.println("influenceurs="+influenceurs+"like="+ like);
+System.out.println("followers="+followers+"like="+ like);
  i++;
 	 
 	 
