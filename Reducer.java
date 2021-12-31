@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class SumPriceReducer
+public class Reducer
         extends Reducer<Text,DoubleWritable,Text,DoubleWritable> {
 
     private DoubleWritable result = new DoubleWritable();
