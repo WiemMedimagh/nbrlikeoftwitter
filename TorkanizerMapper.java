@@ -3,7 +3,7 @@ Package tn.isima.tp2;
  import org.apache.hadoop.io.Text;
  import org.apache.hadoop.mapreduce.Mapper;
  import java.io.IOException;
- import java.util.StringTokenizer;
+ import java.util.StringTorkanizer;
  public class TorkanizerMapper
  extends Mapper<Object, Text, Text, DoubleWritable>{
  
