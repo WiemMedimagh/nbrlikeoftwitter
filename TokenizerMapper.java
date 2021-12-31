@@ -19,12 +19,12 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
 
 	String[] data=line.split("\t");
 	
-	Key.set(data[0]);
-	int like= Integer.parseInt(data[1]);
-	nbrlike.set(like);
+	Key.set(data[9]);
+	intnumber_of_likes= Integer.parseInt(data[1]);
+	nbrlike.set(number_of_likes);
 	
 		
-	System.out.println("author="+Key+"Nombre de like="+ nbrlike);
+	System.out.println("author="+Key+"number_of_likes="+ nbrlike);
 	context.write(Key,nbrlike);
 		
 		
