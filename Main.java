@@ -10,11 +10,11 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class Main {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf, "price count");
+        Job job = Job.getInstance(conf, "likes count");
         job.setJarByClass(Main.class);
         job.setMapperClass(TokenizerMapper.class);
-        job.setReducerClass(SumPriceReducer.class);
-        job.setOutputKeyClass(Text.class);
+        job.setReducerClass(nbrReducer.class);
+        job.setOutputKeyClass(tweets.csv);
         job.setOutputValueClass(DoubleWritable.class);
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
