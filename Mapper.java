@@ -25,7 +25,7 @@ public void map(LongWritable key, Text value, Context context) throws IOExceptio
 	
 		
 	System.out.println("author="+Key+"Nombre de like="+ nbrlike);
-	context.write(Key,Max);
+	context.write(Key,nbrlike);
 		
 }
 }
