@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public  class TokenizerMapper
+public  class Mapper
 extends Mapper<LongWritable, Text, Text, IntWritable>{
 
 
