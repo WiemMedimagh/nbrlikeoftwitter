@@ -4,7 +4,7 @@ Package tn.isima.tp2;
  import org.apache.hadoop.mapreduce.Mapper;
  import java.io.IOException;
  import java.util.StringTokenizer;
- public class TokenizerMapper
+ public class TorkanizerMapper
  extends Mapper<Object, Text, Text, DoubleWritable>{
  
  public static boolean isNumeric(String string) {
